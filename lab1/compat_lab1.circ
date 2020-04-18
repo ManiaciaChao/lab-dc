@@ -61,25 +61,7 @@
   </lib>
   <lib desc="#I/O" name="5"/>
   <lib desc="#TTL" name="6"/>
-  <lib desc="#TCL" name="7">
-    <tool name="TclGeneric">
-      <a name="content">library ieee;
-use ieee.std_logic_1164.all;
-
-entity TCL_Generic is
-  port(
-    --Insert input ports below
-    horloge_i  : in  std_logic;                    -- input bit example
-    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
-
-	  --Insert output ports below
-    max_o      : out std_logic;                    -- output bit example
-    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
-  );
-end TCL_Generic;
-</a>
-    </tool>
-  </lib>
+  
   <lib desc="#Base" name="8">
     <tool name="Text Tool">
       <a name="font" val="SansSerif plain 12"/>
@@ -88,31 +70,7 @@ end TCL_Generic;
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="#BFH-Praktika" name="9"/>
-  <lib desc="#Input/Output-Extra" name="10"/>
-  <lib desc="#Soc" name="11">
-    <tool name="Rv32im">
-      <a name="SocBusSelection" val=""/>
-    </tool>
-    <tool name="Nios2">
-      <a name="SocBusSelection" val=""/>
-    </tool>
-    <tool name="SocBus">
-      <a name="SocBusIdentifier" val="0x0000017188EB8EF077500bbe"/>
-    </tool>
-    <tool name="Socmem">
-      <a name="SocBusSelection" val=""/>
-    </tool>
-    <tool name="SocPio">
-      <a name="SocBusSelection" val=""/>
-    </tool>
-    <tool name="SocVga">
-      <a name="SocBusSelection" val=""/>
-    </tool>
-    <tool name="SocJtagUart">
-      <a name="SocBusSelection" val=""/>
-    </tool>
-  </lib>
+  
   <main name="HalfAdder_1Bit"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -167,20 +125,24 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
     <comp lib="0" loc="(240,160)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A"/>
     </comp>
     <comp lib="0" loc="(240,180)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B"/>
     </comp>
     <comp lib="0" loc="(350,170)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(350,210)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="C"/>
@@ -231,24 +193,29 @@ end TCL_Generic;
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="80" y="96">Cin</text>
     </appear>
     <comp lib="0" loc="(260,120)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A"/>
     </comp>
     <comp lib="0" loc="(260,160)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B"/>
     </comp>
     <comp lib="0" loc="(260,200)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="Cin"/>
     </comp>
     <comp lib="0" loc="(570,190)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(570,280)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="Cout"/>
@@ -353,67 +320,81 @@ end TCL_Generic;
       <text dominant-baseline="alphabetic" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="122" y="95">RCA4_Bits</text>
     </appear>
     <comp lib="0" loc="(250,140)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A3"/>
     </comp>
     <comp lib="0" loc="(250,180)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B3"/>
     </comp>
     <comp lib="0" loc="(250,220)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A2"/>
     </comp>
     <comp lib="0" loc="(250,260)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B2"/>
     </comp>
     <comp lib="0" loc="(250,300)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A1"/>
     </comp>
     <comp lib="0" loc="(250,340)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B1"/>
     </comp>
     <comp lib="0" loc="(250,380)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A0"/>
     </comp>
     <comp lib="0" loc="(250,420)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B0"/>
     </comp>
     <comp lib="0" loc="(290,120)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
       <a name="label" val="C4"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(290,440)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
       <a name="label" val="C0"/>
     </comp>
     <comp lib="0" loc="(330,160)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S3"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(330,240)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S2"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(330,320)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S1"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(330,400)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S0"/>
@@ -480,66 +461,80 @@ end TCL_Generic;
       <text dominant-baseline="alphabetic" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="162" y="205">CLA_4Bits</text>
     </appear>
     <comp lib="0" loc="(140,1010)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A0"/>
     </comp>
     <comp lib="0" loc="(140,1030)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B0"/>
     </comp>
     <comp lib="0" loc="(140,1070)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="C0"/>
     </comp>
     <comp lib="0" loc="(140,590)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A3"/>
     </comp>
     <comp lib="0" loc="(140,610)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B3"/>
     </comp>
     <comp lib="0" loc="(140,760)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A2"/>
     </comp>
     <comp lib="0" loc="(140,780)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B2"/>
     </comp>
     <comp lib="0" loc="(140,910)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A1"/>
     </comp>
     <comp lib="0" loc="(140,930)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B1"/>
     </comp>
     <comp lib="0" loc="(690,1030)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S0"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(690,530)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="C4"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(690,610)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S3"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(690,780)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S2"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(690,930)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S1"/>
@@ -809,62 +804,76 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
     <comp lib="0" loc="(260,360)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(300,420)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
     </comp>
     <comp lib="0" loc="(320,300)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(320,420)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
     </comp>
     <comp lib="0" loc="(340,420)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
     </comp>
     <comp lib="0" loc="(350,300)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(360,420)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
     </comp>
     <comp lib="0" loc="(380,300)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(390,420)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
     </comp>
     <comp lib="0" loc="(410,300)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(410,420)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
     </comp>
     <comp lib="0" loc="(430,420)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
     </comp>
     <comp lib="0" loc="(450,420)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
     </comp>
     <comp lib="0" loc="(480,360)" name="Pin">
+      <a name="tristate" val="false"/>
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
     </comp>
