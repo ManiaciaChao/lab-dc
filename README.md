@@ -4,22 +4,22 @@ This repos is used for HUST `digital circuits and logic design` lab, including i
 
 ## Requirement
 
-`logisim-evolution` is recommended to view and edit `.circ` files instead of older `logisim`.
+`Logisim ITA` or `Logisim HUST` is recommended to view and edit `.circ` files instead of older `logisim`.
 
-You can get it from [GitHub releases](https://github.com/reds-heig/logisim-evolution/releases).
-
-For Archlinux, you can get it from AUR:
-
-```shell
-yay -S logisim-evolution
-```
-
-You can also use [`Logism ITA`](https://github.com/LogisimIt/Logisim/releases) with some limits.
+You can get it from [GitHub releases](https://github.com/LogisimIt/Logisim/releases).
 
 For Archlinux, you can get it from AUR:
 
 ```shell
 yay -S logisim-ita-bin
+```
+
+You can also use [`logisim-evolution`](https://github.com/reds-heig/logisim-evolution/releases) with some limits.
+
+For Archlinux, you can get it from AUR:
+
+```shell
+yay -S logisim-evolution
 ```
 
 ## Compatibility
@@ -36,12 +36,14 @@ However, you are still allowed to view and edit `.circ` files created by `logisi
 
 * Default `Three-state` is set to `true`.
 
-### For `Logism ITA`
+### For `logisim-evolution`
 
-You're expected to **only** view or edit files whose filename start with `compat_`.
+`logisim` and `Logisim ITA` are **only** expected to view or edit files whose filename start with `compat_`.
 
 I wrote some scripts to convert from `logisim-evolution` to `logisim-ita` somehow:
 
 ```shell
 ./script/makeCompat.sh ./lab1/lab1.circ
 ```
+
+However, you'd better fork and edit `logisim-evolution` sources,  then compile your own `logisim-evolution`,  which save all properties of every component in `.circ` files.
