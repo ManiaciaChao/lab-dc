@@ -1,3 +1,6 @@
 实验*
 !templates/*
 logisim-evolution-*.jar
+lab*/*.docx
+lab*/assets
+lab*/*.md
